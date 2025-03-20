@@ -116,6 +116,36 @@
                     </div>
                 </form>
             </div>
+            <!--Infomações Profissionais -->
+            <div class="card">
+                <h2>Informações Profissionais</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="ocupacao">Ocupação:</label>
+                        <input type="text" id="ocupacao" name="ocupacao" placeholder="Digite sua ocupação" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa:</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ da Empresa:</label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo" name="cargo" placeholder="Digite seu cargo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="salario">Salário Aproximado:</label>
+                        <input type="number" id="salario" name="salario" placeholder="Digite seu salário aproximado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data-admissao">Data de Admissão:</label>
+                        <input type="date" id="data-admissao" name="data-admissao" required>
+                    </div>
+                </form>
+            </div>
             <!-- Credenciais de Acesso -->
             <div class="card">
                 <h2>Credenciais de Acesso</h2>
@@ -153,74 +183,7 @@
                     </div>
                 </form>
             </div>
-            <!--Infomações Profissionais -->
-            <div class="card">
-                <h2>Informações Profissionais</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="ocupacao">Ocupação:</label>
-                        <input type="text" id="ocupacao" name="ocupacao" placeholder="Digite sua ocupação" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="empresa">Empresa:</label>
-                        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cnpj">CNPJ da Empresa:</label>
-                        <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da empresa" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cargo">Cargo:</label>
-                        <input type="text" id="cargo" name="cargo" placeholder="Digite seu cargo" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="salario">Salário Aproximado:</label>
-                        <input type="number" id="salario" name="salario" placeholder="Digite seu salário aproximado" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="data-admissao">Data de Admissão:</label>
-                        <input type="date" id="data-admissao" name="data-admissao" required>
-                    </div>
-                </form>
-            </div>
-            <!--Preferências e Redes Sociais -->
-            <div class="card">
-                <h2>Preferências e Redes Sociais</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="genero-musical">Gênero Musical Favorito:</label>
-                        <input type="text" id="genero-musical" name="genero-musical" placeholder="Digite seu gênero musical favorito">
-                    </div>
-                    <div class="form-group">
-                        <label>Hobbies:</label>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="hobbies" value="futebol"> Futebol</label>
-                            <label><input type="checkbox" name="hobbies" value="leitura"> Leitura</label>
-                            <label><input type="checkbox" name="hobbies" value="viagens"> Viagens</label>
-                            <label><input type="checkbox" name="hobbies" value="musica"> Música</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="facebook">Facebook:</label>
-                        <input type="text" id="facebook" name="facebook" placeholder="Digite o link do seu Facebook">
-                    </div>
-                    <div class="form-group">
-                        <label for="instagram">Instagram:</label>
-                        <input type="text" id="instagram" name="instagram" placeholder="Digite o link do seu Instagram">
-                    </div>
-                    <div class="form-group">
-                        <label for="linkedin">LinkedIn:</label>
-                        <input type="text" id="linkedin" name="linkedin" placeholder="Digite o link do seu LinkedIn">
-                    </div>
-                    <div class="form-group">
-                        <label>Notificações via E-mail:</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="notificacoes-email" value="sim" required> Sim</label>
-                            <label><input type="radio" name="notificacoes-email" value="nao" required> Não</label>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            
             <!-- Pagamento e Dados Bancários -->
             <div class="card">
                 <h2>Pagamento e Dados Bancários</h2>
@@ -261,6 +224,44 @@
                             <option value="poupanca">Poupança</option>
                             <option value="corrente">Corrente</option>
                         </select>
+                    </div>
+                </form>
+            </div>
+            <!--Preferências e Redes Sociais -->
+            <div class="card">
+                <h2>Preferências e Redes Sociais</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="genero-musical">Gênero Musical Favorito:</label>
+                        <input type="text" id="genero-musical" name="genero-musical" placeholder="Digite seu gênero musical favorito">
+                    </div>
+                    <div class="form-group">
+                        <label>Hobbies:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="hobbies" value="futebol"> Futebol</label>
+                            <label><input type="checkbox" name="hobbies" value="leitura"> Leitura</label>
+                            <label><input type="checkbox" name="hobbies" value="viagens"> Viagens</label>
+                            <label><input type="checkbox" name="hobbies" value="musica"> Música</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="facebook">Facebook:</label>
+                        <input type="text" id="facebook" name="facebook" placeholder="Digite o link do seu Facebook">
+                    </div>
+                    <div class="form-group">
+                        <label for="instagram">Instagram:</label>
+                        <input type="text" id="instagram" name="instagram" placeholder="Digite o link do seu Instagram">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn:</label>
+                        <input type="text" id="linkedin" name="linkedin" placeholder="Digite o link do seu LinkedIn">
+                    </div>
+                    <div class="form-group">
+                        <label>Notificações via E-mail:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="notificacoes-email" value="sim" required> Sim</label>
+                            <label><input type="radio" name="notificacoes-email" value="nao" required> Não</label>
+                        </div>
                     </div>
                 </form>
             </div>
