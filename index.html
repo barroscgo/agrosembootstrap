@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Agronômico</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicioa icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="hamburger-menu" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#"><i class="icon fas fa-home"></i> Início</a></li>
+                <li><a href="#"><i class="icon fas fa-tractor"></i> Maquinário</a></li>
+                <li><a href="#"><i class="icon fas fa-seedling"></i> Plantio</a></li>
+                <li><a href="#"><i class="icon fas fa-chart-line"></i> Relatórios</a></li>
+                <li><a href="#"><i class="icon fas fa-cogs"></i> Configurações</a></li>
+            </ul>
+            <div class="separator"></div> <!-- Separador visual -->
+        </nav>
+        <div class="sidebar-image">
+            <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/agriculture-logo-design-template-5cc34a1160c85faa8aed212f5f54ee61_screen.jpg?ts=1630938090" alt="Logo Agronômico">
+        </div>
+    </aside>
+    <div class="main-container">
+        <header class="header">
+            <h1>Cadastro de produtor rural</h1>
+        </header>
+
+        <main class="main-content">
+            <!-- Informações Pessoais -->
+            <div class="card">
+                <h2>Informações Pessoais</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data-nascimento">Data de Nascimento:</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rg">RG:</label>
+                        <input type="text" id="rg" name="rg" placeholder="Digite seu RG" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado-civil">Estado Civil:</label>
+                        <select id="estado-civil" name="estado-civil" required>
+                            <option value="">Selecione</option>
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="divorciado">Divorciado(a)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto-perfil">Foto de Perfil:</label>
+                        <input type="file" id="foto-perfil" name="foto-perfil" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assinatura-digital">Assinatura Digital:</label>
+                        <input type="file" id="assinatura-digital" name="assinatura-digital" accept="image/*" required>
+                    </div>
+                </form>
+            </div>
+            <!--Contato -->
+            <div class="card">
+                <h2>Contato</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">Celular:</label>
+                        <input type="text" id="celular" name="celular" placeholder="Digite seu celular" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço:</label>
+                        <textarea id="endereco" name="endereco" placeholder="Digite seu endereço" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pais">País:</label>
+                        <select id="pais" name="pais" required>
+                            <option value="">Selecione</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <!-- Credenciais de Acesso -->
+            <div class="card">
+                <h2>Credenciais de Acesso</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="username">Nome de Usuário:</label>
+                        <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmar-senha">Confirmação de Senha:</label>
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pergunta-secreta">Pergunta Secreta:</label>
+                        <select id="pergunta-secreta" name="pergunta-secreta" required>
+                            <option value="">Selecione</option>
+                            <option value="nome-mae">Qual é o nome da sua mãe?</option>
+                            <option value="pet">Qual é o nome do seu primeiro animal de estimação?</option>
+                            <option value="cidade">Em qual cidade você nasceu?</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="resposta-secreta">Resposta Secreta:</label>
+                        <input type="text" id="resposta-secreta" name="resposta-secreta" placeholder="Digite sua resposta secreta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="termos-uso">
+                            <input type="checkbox" id="termos-uso" name="termos-uso" required>
+                            Aceito os <a href="#">Termos de Uso</a>.
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <!--Infomações Profissionais -->
+            <div class="card">
+                <h2>Informações Profissionais</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="ocupacao">Ocupação:</label>
+                        <input type="text" id="ocupacao" name="ocupacao" placeholder="Digite sua ocupação" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa:</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ da Empresa:</label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo" name="cargo" placeholder="Digite seu cargo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="salario">Salário Aproximado:</label>
+                        <input type="number" id="salario" name="salario" placeholder="Digite seu salário aproximado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data-admissao">Data de Admissão:</label>
+                        <input type="date" id="data-admissao" name="data-admissao" required>
+                    </div>
+                </form>
+            </div>
+            <!--Preferências e Redes Sociais -->
+            <div class="card">
+                <h2>Preferências e Redes Sociais</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="genero-musical">Gênero Musical Favorito:</label>
+                        <input type="text" id="genero-musical" name="genero-musical" placeholder="Digite seu gênero musical favorito">
+                    </div>
+                    <div class="form-group">
+                        <label>Hobbies:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="hobbies" value="futebol"> Futebol</label>
+                            <label><input type="checkbox" name="hobbies" value="leitura"> Leitura</label>
+                            <label><input type="checkbox" name="hobbies" value="viagens"> Viagens</label>
+                            <label><input type="checkbox" name="hobbies" value="musica"> Música</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="facebook">Facebook:</label>
+                        <input type="text" id="facebook" name="facebook" placeholder="Digite o link do seu Facebook">
+                    </div>
+                    <div class="form-group">
+                        <label for="instagram">Instagram:</label>
+                        <input type="text" id="instagram" name="instagram" placeholder="Digite o link do seu Instagram">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn:</label>
+                        <input type="text" id="linkedin" name="linkedin" placeholder="Digite o link do seu LinkedIn">
+                    </div>
+                    <div class="form-group">
+                        <label>Notificações via E-mail:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="notificacoes-email" value="sim" required> Sim</label>
+                            <label><input type="radio" name="notificacoes-email" value="nao" required> Não</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Pagamento e Dados Bancários -->
+            <div class="card">
+                <h2>Pagamento e Dados Bancários</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="numero-cartao">Número do Cartão de Crédito:</label>
+                        <input type="text" id="numero-cartao" name="numero-cartao" placeholder="Digite o número do cartão" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vencimento-cartao">Data de Vencimento do Cartão:</label>
+                        <input type="month" id="vencimento-cartao" name="vencimento-cartao" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">Código de Segurança (CVV):</label>
+                        <input type="number" id="cvv" name="cvv" placeholder="Digite o CVV" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="banco">Banco:</label>
+                        <select id="banco" name="banco" required>
+                            <option value="">Selecione</option>
+                            <option value="banco-do-brasil">Banco do Brasil</option>
+                            <option value="caixa">Caixa</option>
+                            <option value="bradesco">Bradesco</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="agencia">Agência:</label>
+                        <input type="text" id="agencia" name="agencia" placeholder="Digite o número da agência" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="conta-corrente">Conta Corrente:</label>
+                        <input type="text" id="conta-corrente" name="conta-corrente" placeholder="Digite o número da conta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-conta">Tipo de Conta:</label>
+                        <select id="tipo-conta" name="tipo-conta" required>
+                            <option value="">Selecione</option>
+                            <option value="poupanca">Poupança</option>
+                            <option value="corrente">Corrente</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <!--Outros Recursos -->
+            <div class="card">
+                <h2>Outros Recursos</h2>
+                <form id="outros-recursos-form">
+                    <div class="form-group">
+                        <label for="upload-pdf">Upload de Documento PDF:</label>
+                        <input type="file" id="upload-pdf" name="upload-pdf" accept="application/pdf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aceitar-termos">Aceitar Termos:</label>
+                        <input type="radio" id="aceitar-termos" name="aceitar-termos" >
+                        <span id="termos-status">Sim</span>
+                        <input type="radio" id="aceitar-termos" name="aceitar-termos" >
+                        <span id="termos-status">Não</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario-contato">Horário de Preferência para Contato:</label>
+                        <input type="time" id="horario-contato" name="horario-contato" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dependentes">Número de Dependentes:</label>
+                        <input type="number" id="dependentes" name="dependentes" placeholder="Digite o número de dependentes" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cor-favorita">Cor Favorita:</label>
+                        <input type="color" id="cor-favorita" name="cor-favorita" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentarios">Comentários ou Observações:</label>
+                        <textarea id="comentarios" name="comentarios" placeholder="Digite seus comentários ou observações" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn-save" onclick="salvarFormulario()">Salvar</button>
+                <button type="button" class="btn-clear" onclick="limparFormulario()">Limpar</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Site Agronômico. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

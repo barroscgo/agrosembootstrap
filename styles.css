@@ -1,0 +1,326 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f1f8e9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Barra lateral */
+.sidebar {
+    height: 100vh;
+    background-color: #2e7d32;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    padding: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-image {
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.sidebar-image img {
+    max-width: 80%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 10px 15px;
+}
+
+.icon {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Menu Hamburger */
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    cursor: pointer;
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    background-color: #81c784;
+    color: #1b5e20;
+    padding: 15px 20px;
+    z-index: 900;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Conteúdo principal */
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 80px 20px 80px 20px;
+    background-color: #f1f8e9;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+/* Cartões de formulário */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #a5d6a7;
+}
+
+/* Grupos de formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #37474f;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group input[type="month"],
+.form-group input[type="time"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Grupos de checkbox e radio */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkbox-group label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-group input,
+.radio-group input {
+    margin-right: 5px;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.btn-save,
+.btn-clear {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-save {
+    background-color: #388e3c;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #2e7d32;
+    transform: translateY(-2px);
+}
+
+.btn-clear {
+    background-color: #e2df2d;
+    color: white;
+}
+
+.btn-clear:hover {
+    background-color: #92af0f;
+    transform: translateY(-2px);
+}
+
+/* Rodapé */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    background-color: #81c784;
+    color: #1b5e20;
+    padding: 15px 20px;
+    z-index: 900;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    text-align: center; 
+    transition: all 0.3s ease;
+}
+
+/* Estilos para campos de formulário específicos */
+#cor-favorita {
+    height: 40px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    padding: 8px;
+    background-color: #f5f5f5;
+    border: 1px dashed #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        box-shadow: 3px 0 5px rgba(0,0,0,0.2);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .header,
+    .footer,
+    .main-content {
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .button-group button {
+        width: 100%;
+    }
+}
+
+/* Estilos para telas menores */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+    }
+    
+    .checkbox-group,
+    .radio-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
